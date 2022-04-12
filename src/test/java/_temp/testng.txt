@@ -1,0 +1,28 @@
+
+
+
+
+suit{
+    BeforeSuite()
+    Parametre a, b, c
+
+    test1{
+        BeforeTest()
+        Parametre d, e
+        class{
+            method{}
+        }
+        class{}
+        AfterTest()
+    }
+
+
+    test2{
+        BeforeTest()
+        class{}
+        class{}
+        AfterTest()
+    }
+
+    AfterSuite()
+}suit

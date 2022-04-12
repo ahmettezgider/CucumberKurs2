@@ -4,13 +4,18 @@ package pages;
 import io.cucumber.java.*;
 
 
-public class Hook {
+public class Hooks {
 
+    // islem baslayinca ilk calisir, bir sefer calisir
+    // tüm senaryolardan önce
     @BeforeAll
     public static void beforeAll() {
         System.out.println("Before all");
     }
 
+    // Her senaryo öncesi calisir
+    // eger Bu before"u belirli senaryoya ait olarak calistiramak istiyorsak
+    // o senaryonun annotation"inin @Before icine yazariz
     @Before
     public void before(Scenario scenario){
         System.out.println(scenario.getName() + " started");
@@ -22,12 +27,27 @@ public class Hook {
         System.out.println(scenario.isFailed());
     }
 
+    @Before("@Sc1")
+    public void before1(Scenario scenario){
+        System.out.println(scenario.getName() + " started, @Sc1");
+    }
+
+    @Before("@Sc2")
+    public void before2(Scenario scenario){
+        System.out.println(scenario.getName() + " started, @Sc2");
+    }
+
+
     @BeforeStep
-    public void beforeStep(Scenario scenario){
+    public void beforeStep(){
+
     }
 
     @AfterStep
     public void afterStep(Scenario scenario){
+        if (scenario.isFailed()){
+
+        }
 
     }
 
@@ -35,7 +55,6 @@ public class Hook {
     public void after(Scenario scenario){
 
     }
-
 
     @AfterAll
     public static void afterAll() {

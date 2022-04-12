@@ -1,6 +1,7 @@
 package stepdefs;
 
 import io.cucumber.java.en.*;
+import org.testng.Assert;
 
 
 public class Feature1Steps {
@@ -40,6 +41,7 @@ public class Feature1Steps {
     @Then("page title should be My Account")
     public void pageTitleShouldBeMyAccount() {
         System.out.println("page title should be My Account");
+        Assert.fail();
     }
 
     @And("My Account page should be visible")
