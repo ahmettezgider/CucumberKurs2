@@ -14,7 +14,7 @@ public class ForgotStepDefs {
 
     @Given("user is at Login Page")
     public void userIsAtLoginPage() {
-    forgotPage.gotoLoginPage();
+    forgotPage.gotoLoginPage("https://opencart.abstracta.us/index.php?route=account/login");
     }
 
     @When("user clicks to forgot password")

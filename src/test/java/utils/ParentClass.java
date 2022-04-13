@@ -15,8 +15,8 @@ public class ParentClass {
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
-     public void gotoLoginPage(){
-        driver.get("https://opencart.abstracta.us/index.php?route=account/login");
+     public void gotoLoginPage(String url){
+        driver.get(url);
      }
 
 }
