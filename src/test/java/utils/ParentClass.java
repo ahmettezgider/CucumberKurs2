@@ -7,7 +7,7 @@ import java.time.Duration;
 
 public class ParentClass {
 
-    protected WebDriver driver;
+    protected static WebDriver driver;
     protected WebDriverWait wait;
 
     public ParentClass(){
@@ -15,5 +15,8 @@ public class ParentClass {
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
+     public void gotoLoginPage(){
+        driver.get("https://opencart.abstracta.us/index.php?route=account/login");
+     }
 
 }

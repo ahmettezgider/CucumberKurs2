@@ -6,6 +6,10 @@
       Given user is at Login Page
       When user clicks to forgot password
       Then user enters an valid email
-      And  user clicks on continue button
+      And user clicks on continue button
       And user checks text for confirmation email
+
+
+      Scenario: senaryo deneme
+        Given deneme step
 
