@@ -10,6 +10,4 @@
       And user checks text for confirmation email
 
 
-      Scenario: senaryo deneme
-        Given deneme step
 
