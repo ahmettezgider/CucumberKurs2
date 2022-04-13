@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="All Test Suite" parallel="tests">
+
+    <test verbose="2" preserve-order="true" name="Test1">
+        <classes>
+            <class name="runners.RunnerIlkFeature">
+                <methods>
+                    <include name="aaaaa"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="Test1">
+
+    </test>
+</suite>
