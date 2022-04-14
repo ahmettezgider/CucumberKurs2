@@ -2,6 +2,7 @@ package pages;
 
 
 import io.cucumber.java.*;
+import utils.Driver;
 
 
 public class Hooks {
@@ -18,13 +19,13 @@ public class Hooks {
     // o senaryonun annotation"inin @Before icine yazariz
     @Before
     public void before(Scenario scenario){
-        System.out.println(scenario.getName() + " started");
-        System.out.println(scenario.getId());
-        System.out.println(scenario.getLine());
-        System.out.println(scenario.getSourceTagNames());
-        System.out.println(scenario.getStatus());
-        System.out.println(scenario.getUri());
-        System.out.println(scenario.isFailed());
+       // System.out.println(scenario.getName() + " started");
+       // System.out.println(scenario.getId());
+       // System.out.println(scenario.getLine());
+       // System.out.println(scenario.getSourceTagNames());
+       // System.out.println(scenario.getStatus());
+       // System.out.println(scenario.getUri());
+       // System.out.println(scenario.isFailed());
     }
 
     @Before("@Sc1")
@@ -53,11 +54,13 @@ public class Hooks {
 
     @After
     public void after(Scenario scenario){
+        Driver.quitDriver();
 
     }
 
     @AfterAll
     public static void afterAll() {
+        Driver.quitDriver();
         System.out.println("After All");
     }
 

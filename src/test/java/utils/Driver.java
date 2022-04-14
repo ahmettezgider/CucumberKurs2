@@ -1,10 +1,13 @@
 package utils;
 
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import static utils.Browser.CHROME;
 
 public class Driver {
 
@@ -13,13 +16,13 @@ public class Driver {
 
 
     public static WebDriver getDriver() {
-        return getDriver(Browser.CHROME);
+        return getDriver(CHROME);
     }
 
     public static WebDriver getDriver(Browser browser) {
 
-        if (browsers.get()==null)
-            browsers.set(browser);
+        if (browsers.get()==null){
+            browsers.set(browser);}
 
         if (drivers.get() == null) {
             switch (browser) {
