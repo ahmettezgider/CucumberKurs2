@@ -15,7 +15,7 @@ Feature: feature hooks
       # AfterStep
     # After   (Senaryolar icin)
 
-  @Sc2
+  @Sc2 @Sc3
   Scenario: scenario hooks ikinci
     # Before
     Given given step
