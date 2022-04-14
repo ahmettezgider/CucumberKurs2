@@ -1,4 +1,4 @@
-package _temp;
+package _temp.testng;
 
 public class MethodClass {
 

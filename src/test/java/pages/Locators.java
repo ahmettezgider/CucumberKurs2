@@ -5,9 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import utils.Conditions;
 import utils.Driver;
+import utils.ParentClass;
 
-public class Locators {
+import java.lang.reflect.Field;
+
+public class Locators extends ParentClass {
 
     public Locators(){
         PageFactory.initElements(new AjaxElementLocatorFactory(Driver.getDriver(),10), this);
@@ -61,6 +66,7 @@ public class Locators {
 
     @FindBy(xpath = "//aside[@id='column-right']//a[text()='Logout']")
     public WebElement eLogoutSide;
+
 
 
 

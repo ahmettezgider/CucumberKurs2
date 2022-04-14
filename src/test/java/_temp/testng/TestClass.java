@@ -1,4 +1,4 @@
-package _temp;
+package _temp.testng;
 
 import org.testng.Assert;
 import org.testng.annotations.Listeners;

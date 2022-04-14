@@ -8,4 +8,3 @@
       Then user enters an valid email
       And  user clicks on continue button
       And user checks text for confirmation email
-
